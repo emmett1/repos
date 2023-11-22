@@ -1,7 +1,7 @@
 # Depends on: autoconf2.13 cbindgen dbus-glib gtk3 llvm nodejs alsa-lib startup-notification unzip yasm nspr libwebp libxcomposite libxcursor libxdamage libice libsm libvpx nasm nss libevent 
 
 name=firefox-esr
-version=115.4.0
+version=115.5.0
 release=1
 source=(https://archive.mozilla.org/pub/firefox/releases/${version}esr/source/firefox-${version}esr.source.tar.xz)
 
