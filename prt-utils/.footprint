@@ -1,5 +1,3 @@
-drwxr-xr-x	root/root	etc/
-drwxr-xr-x	root/root	etc/revdep.d/
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/dllist
@@ -63,4 +61,3 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/prtsweep.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/prtverify.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/prtwash.1.gz
--rw-r--r--	root/root	usr/share/man/man1/revdep.1.gz

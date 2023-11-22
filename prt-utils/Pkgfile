@@ -3,8 +3,16 @@
 name=prt-utils
 version=1.3
 release=1
-source=(http://crux.nu/files/tools/prt-utils/$name-$version.tar.xz)
+source=(http://crux.nu/files/tools/prt-utils/$name-$version.tar.xz
+	revdep.sh)
+
+pre_build() {
+	# crux's revdep is thrash, use mine
+	sed 's;revdep/revdep;;' -i Makefile
+	sed 's;prtverify \\;prtverify;' -i Makefile
+}
 
 post_build() {
-	install -d $PKG/etc/revdep.d
+	#install -d $PKG/etc/revdep.d
+	install -m755 $SRC/revdep.sh $PKG/usr/bin/revdep	
 }
