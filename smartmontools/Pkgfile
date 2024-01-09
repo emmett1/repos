@@ -2,6 +2,9 @@ name=smartmontools
 version=7.4
 release=1
 source=(https://downloads.sourceforge.net/$name/$name-$version.tar.gz
-	smartd.run smartd.finish)
-sv=(smartd.run smartd.finish)
+	smartd)
 build_opt="--with-initscriptdir=no --with-libsystemd=no"
+
+post_build() {
+	install -Dm755 $SRC/smartd $PKG/etc/rc.d/smartd
+}

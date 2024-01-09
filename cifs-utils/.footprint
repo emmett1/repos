@@ -1,0 +1,10 @@
+drwxr-xr-x	root/root	sbin/
+-rwxr-xr-x	root/root	sbin/mount.cifs
+lrwxrwxrwx	root/root	sbin/mount.smb3 -> mount.cifs
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/smb2-quota
+-rwxr-xr-x	root/root	usr/bin/smbinfo
+drwxr-xr-x	root/root	usr/include/
+-rw-r--r--	root/root	usr/include/cifsidmap.h
+drwxr-xr-x	root/root	usr/sbin/

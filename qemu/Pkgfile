@@ -1,7 +1,7 @@
-# Depends on: glib libslirp alsa-lib sdl pixman
+# Depends on: glib libslirp alsa-lib sdl2 pixman
 
 name=qemu
-version=8.1.1
+version=8.2.0
 release=1
 source=(https://download.$name.org/$name-$version.tar.xz)
 build_type=configure_build

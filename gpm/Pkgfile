@@ -2,12 +2,17 @@ name=gpm
 version=1.20.7
 release=1
 source=(https://anduin.linuxfromscratch.org/BLFS/$name/$name-$version.tar.bz2
-	gpm-1.20.7-consolidated-1.patch)
+	gpm-1.20.7-consolidated-1.patch
+	gpm
+	gpmconf)
 
 pre_build() {
+	export CFLAGS="$CFLAGS -fcommon"
 	./autogen.sh
 }
 
 post_build() {
 	install -v -m644 conf/gpm-root.conf $PKG/etc
+	install -Dm755 $SRC/$name $PKG/etc/rc.d/$name
+	install -Dm644 $SRC/gpmconf $PKG/etc/conf.d/$name
 }

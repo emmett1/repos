@@ -1,7 +1,7 @@
 # Depends on: libxcvt pixman font-util xkeyboard-config libepoxy libdrm libxkbfile libxfont2 
 
 name=xorg-server
-version=21.1.8
+version=21.1.10
 release=1
 source=(https://www.x.org/pub/individual/xserver/$name-$version.tar.xz)
 build_opt="

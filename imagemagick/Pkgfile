@@ -1,7 +1,7 @@
 # Depends on: lcms2 pango 
 
 name=imagemagick
-version=7.1.1.20
+version=7.1.1.24
 release=1
 source=(https://www.$name.org/archive/releases/ImageMagick-${version%.*}-${version##*.}.tar.xz)
 build_opt="--enable-hdri --with-modules --with-perl"

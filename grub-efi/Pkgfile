@@ -1,11 +1,11 @@
 # Depends on: grub 
 
 name=grub-efi
-version=2.06
+version=2.12
 release=1
-source=(https://ftp.gnu.org/gnu/$name/grub-$version.tar.xz
+source=(https://ftp.gnu.org/gnu/grub/grub-$version.tar.xz
 	https://unifoundry.com/pub/unifont/unifont-15.0.01/font-builds/unifont-15.0.01.pcf.gz
-	grub-2.06-upstream_fixes-1.patch)
+	extra_deps.lst)
 renames=(SKIP unifont-15.0.01.pcf.noextract SKIP)
 build_opt="--disable-efiemu
 	--enable-grub-mount
@@ -18,6 +18,7 @@ build_opt="--disable-efiemu
 pre_build() {
 	unset CFLAGS
 	unset CXXFLAGS
+	cp $SRC/extra_deps.lst grub-core/
 	mkdir -pv $PKG/usr/share/fonts/unifont
 	gunzip -c ../unifont-15.0.01.pcf.noextract > $PKG/usr/share/fonts/unifont/unifont.pcf
 }

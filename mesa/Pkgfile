@@ -1,9 +1,10 @@
-# Depends on: libdrm libx11 libxcb libxext libxfixes libxshmfence libxxf86vm llvm python3-mako python3-markupsafe libglvnd libxrandr 
+# Depends on: libdrm libx11 libxcb libxext libxfixes libxshmfence libxxf86vm llvm python3-mako python3-markupsafe libglvnd libxrandr glslang
 
 name=mesa
-version=23.2.1
+version=23.3.2
 release=1
 source=(https://archive.mesa3d.org/$name-$version.tar.xz)
+keep_static=1
 
 [ -f /usr/lib/pkgconfig/wayland-client.pc ] && wayland=",wayland"
 
@@ -14,4 +15,6 @@ build_opt="
 	-Dvalgrind=disabled
 	-Dlibunwind=disabled
 	-Dglvnd=true
+	-Dvulkan-drivers=auto
+	-Dvulkan-layers=device-select,intel-nullhw,overlay
 "

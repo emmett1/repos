@@ -9177,7 +9177,6 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/build/include/config/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/build/include/config/GENWQE_PLATFORM_ERROR_RECOVERY (EMPTY)
 -rw-r--r--	root/root	lib/modules/<kernel-version>/build/include/config/GET_FREE_REGION (EMPTY)
 -rw-r--r--	root/root	lib/modules/<kernel-version>/build/include/config/GFS2_FS (EMPTY)
--rw-r--r--	root/root	lib/modules/<kernel-version>/build/include/config/GFS2_FS_LOCKING_DLM (EMPTY)
 -rw-r--r--	root/root	lib/modules/<kernel-version>/build/include/config/GIGABYTE_WMI (EMPTY)
 -rw-r--r--	root/root	lib/modules/<kernel-version>/build/include/config/GLOB (EMPTY)
 -rw-r--r--	root/root	lib/modules/<kernel-version>/build/include/config/GP2AP002 (EMPTY)
@@ -15666,6 +15665,7 @@ drwxrwxr-x	root/root	lib/modules/<kernel-version>/build/include/kunit/
 -rw-rw-r--	root/root	lib/modules/<kernel-version>/build/include/kunit/test-bug.h
 -rw-rw-r--	root/root	lib/modules/<kernel-version>/build/include/kunit/test.h
 -rw-rw-r--	root/root	lib/modules/<kernel-version>/build/include/kunit/try-catch.h
+-rw-rw-r--	root/root	lib/modules/<kernel-version>/build/include/kunit/visibility.h
 drwxrwxr-x	root/root	lib/modules/<kernel-version>/build/include/kvm/
 -rw-rw-r--	root/root	lib/modules/<kernel-version>/build/include/kvm/arm_arch_timer.h
 -rw-rw-r--	root/root	lib/modules/<kernel-version>/build/include/kvm/arm_hypercalls.h
@@ -22246,7 +22246,6 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/crypto/async_tx/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/crypto/chacha20poly1305.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/crypto/chacha_generic.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/crypto/cmac.ko
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/crypto/crc32_generic.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/crypto/crypto_engine.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/crypto/crypto_user.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/crypto/curve25519-generic.ko
@@ -22275,7 +22274,6 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/crypto/async_tx/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/crypto/vmac.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/crypto/xcbc.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/crypto/xctr.ko
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/crypto/xxhash_generic.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/crypto/zstd.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/drivers/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/drivers/accessibility/
@@ -26744,8 +26742,6 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/befs/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/bfs/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/bfs/bfs.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/binfmt_misc.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/btrfs/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/btrfs/btrfs.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/cachefiles/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/cachefiles/cachefiles.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/ceph/
@@ -26764,12 +26760,6 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/efs/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/efs/efs.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/exfat/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/exfat/exfat.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/ext2/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/ext2/ext2.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/ext4/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/ext4/ext4.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/f2fs/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/f2fs/f2fs.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/fat/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/fat/fat.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/fat/msdos.ko
@@ -26782,8 +26772,6 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/fuse/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/fuse/cuse.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/fuse/fuse.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/fuse/virtiofs.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/gfs2/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/gfs2/gfs2.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/hfs/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/hfs/hfs.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/hfsplus/
@@ -26792,21 +26780,14 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/hpfs/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/hpfs/hpfs.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/isofs/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/isofs/isofs.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/jbd2/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/jbd2/jbd2.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/jffs2/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/jffs2/jffs2.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/jfs/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/jfs/jfs.ko
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/mbcache.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/minix/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/minix/minix.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/netfs/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/netfs/netfs.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/nfsd/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/nfsd/nfsd.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/nilfs2/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/nilfs2/nilfs2.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/nls/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/nls/mac-celtic.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/nls/mac-centeuro.ko
@@ -26864,16 +26845,7 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/ntfs/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/ntfs3/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/ntfs3/ntfs3.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/ocfs2/
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/ocfs2/cluster/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/ocfs2/cluster/ocfs2_nodemanager.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/ocfs2/dlm/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/ocfs2/dlm/ocfs2_dlm.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/ocfs2/dlmfs/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/ocfs2/dlmfs/ocfs2_dlmfs.ko
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/ocfs2/ocfs2.ko
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/ocfs2/ocfs2_stack_o2cb.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/ocfs2/ocfs2_stack_user.ko
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/ocfs2/ocfs2_stackglue.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/omfs/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/omfs/omfs.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/orangefs/
@@ -26887,11 +26859,8 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/qnx4/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/qnx6/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/qnx6/qnx6.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/quota/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/quota/quota_tree.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/quota/quota_v1.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/quota/quota_v2.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/reiserfs/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/reiserfs/reiserfs.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/smb/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/smb/client/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/smb/client/cifs.ko
@@ -26910,8 +26879,6 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/ufs/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/ufs/ufs.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/vboxsf/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/vboxsf/vboxsf.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/fs/xfs/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/fs/xfs/xfs.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/kernel/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/kernel/bpf/
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/kernel/bpf/preload/
@@ -26934,9 +26901,6 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/lib/crypto/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/lib/crypto/libcurve25519.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/lib/crypto/libpoly1305.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/lib/lru_cache.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/lib/lz4/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/lib/lz4/lz4_compress.ko
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/lib/lz4/lz4hc_compress.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/lib/math/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/lib/math/cordic.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/lib/objagg.ko
@@ -26952,8 +26916,6 @@ drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/lib/reed_solomon/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/lib/ts_bm.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/lib/ts_fsm.ko
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/lib/ts_kmp.ko
-drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/lib/zstd/
--rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/lib/zstd/zstd_compress.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/mm/
 -rw-r--r--	root/root	lib/modules/<kernel-version>/kernel/mm/hwpoison-inject.ko
 drwxr-xr-x	root/root	lib/modules/<kernel-version>/kernel/net/

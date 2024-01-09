@@ -1,5 +1,5 @@
 name=sudo
-version=1.9.14p3
+version=1.9.15p4
 release=1
 source=(https://www.$name.ws/dist/$name-$version.tar.gz
 	sudo)

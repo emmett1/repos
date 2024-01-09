@@ -3,7 +3,9 @@
 name=wpa_supplicant
 version=2.10
 release=1
-source=(https://w1.fi/releases/$name-$version.tar.gz)
+source=(https://w1.fi/releases/$name-$version.tar.gz
+	wpa
+	wpaconf)
 
 pkg_build() {
 cat > wpa_supplicant/.config << "EOF"
@@ -58,4 +60,7 @@ cat > $PKG/etc/wpa_supplicant.conf << "EOF"
 ctrl_interface=DIR=/run/wpa_supplicant GROUP=wheel
 update_config=1
 EOF
+
+install -Dm755 $SRC/wpa $PKG/etc/rc.d/wpa
+install -Dm644 $SRC/wpaconf $PKG/etc/conf.d/wpa
 }

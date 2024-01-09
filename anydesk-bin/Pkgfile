@@ -13,5 +13,5 @@ pkg_build() {
 	mv * $PKG/
 	rm -rf $PKG/etc/systemd
 	install -d $PKG/etc/revdep.d
-	echo "/usr/lib/anydesk/" > $PKG/etc/revdep.d/anydesk.conf
+	echo "/usr/lib/anydesk/" > $PKG/etc/revdep.d/$name
 }

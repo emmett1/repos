@@ -1,7 +1,7 @@
 # Depends on: popt slang 
 
 name=newt
-version=0.52.23
+version=0.52.24
 release=1
 source=(https://releases.pagure.org/$name/$name-$version.tar.gz)
 build_opt="--with-gpm-support --with-python=python3.11"

@@ -1,7 +1,7 @@
 # Depends on: c-ares icu libuv nghttp2 
 
 name=nodejs
-version=20.8.0
+version=21.5.0
 release=1
 source=(https://$name.org/dist/v$version/node-v$version.tar.xz)
 

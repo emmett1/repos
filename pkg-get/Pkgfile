@@ -1,0 +1,6 @@
+# Depends on: wget
+
+name=pkg-get
+version=0.4.7
+release=1
+source=(http://crux.nu/files/distfiles/${name}-${version}.tar.gz)

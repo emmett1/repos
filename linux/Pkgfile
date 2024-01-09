@@ -1,7 +1,7 @@
-# Depends on: mkinitramfs
+# Depends on: libarchive bc
 
 name=linux
-version=6.1.57
+version=6.1.66
 release=1
 source=(https://cdn.kernel.org/pub/$name/kernel/v6.x/$name-$version.tar.xz
 	dotconfig)
@@ -16,12 +16,12 @@ pkg_build() {
 	sed '/^CONFIG_LOGO_LINUX_CLUT224=/d' -i .config
 	echo '# CONFIG_LOGO_LINUX_CLUT224 is not set' >> .config
 	sed '/^CONFIG_LOCALVERSION=/d' -i .config
-	echo 'CONFIG_LOCALVERSION="-LFS"' >> .config
+	#echo 'CONFIG_LOCALVERSION="-LFS"' >> .config
 	
 	make olddefconfig
 	
 	kernver=${version}$(grep CONFIG_LOCALVERSION= .config | cut -d '"' -f2)
-	
+
 	#make menuconfig
 
 	# replace cpio with bsdcpio
@@ -32,7 +32,7 @@ pkg_build() {
 	
 	mkdir -p $PKG/boot
 	
-	cp  arch/x86/boot/bzImage $PKG/boot/vmlinuz-linux
+	cp arch/x86/boot/bzImage $PKG/boot/vmlinuz-linux
 	
 	make clean
 	make prepare

@@ -1,7 +1,6 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/ffmpeg
--rwxr-xr-x	root/root	usr/bin/ffplay
 -rwxr-xr-x	root/root	usr/bin/ffprobe
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/libavcodec/
@@ -77,6 +76,7 @@ drwxr-xr-x	root/root	usr/include/libavutil/
 -rw-r--r--	root/root	usr/include/libavutil/encryption_info.h
 -rw-r--r--	root/root	usr/include/libavutil/error.h
 -rw-r--r--	root/root	usr/include/libavutil/eval.h
+-rw-r--r--	root/root	usr/include/libavutil/executor.h
 -rw-r--r--	root/root	usr/include/libavutil/ffversion.h
 -rw-r--r--	root/root	usr/include/libavutil/fifo.h
 -rw-r--r--	root/root	usr/include/libavutil/file.h
@@ -137,6 +137,7 @@ drwxr-xr-x	root/root	usr/include/libavutil/
 -rw-r--r--	root/root	usr/include/libavutil/uuid.h
 -rw-r--r--	root/root	usr/include/libavutil/version.h
 -rw-r--r--	root/root	usr/include/libavutil/video_enc_params.h
+-rw-r--r--	root/root	usr/include/libavutil/video_hint.h
 -rw-r--r--	root/root	usr/include/libavutil/xtea.h
 drwxr-xr-x	root/root	usr/include/libpostproc/
 -rw-r--r--	root/root	usr/include/libpostproc/postprocess.h
@@ -151,30 +152,30 @@ drwxr-xr-x	root/root	usr/include/libswscale/
 -rw-r--r--	root/root	usr/include/libswscale/version.h
 -rw-r--r--	root/root	usr/include/libswscale/version_major.h
 drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/libavcodec.so -> libavcodec.so.60.3.100
-lrwxrwxrwx	root/root	usr/lib/libavcodec.so.60 -> libavcodec.so.60.3.100
--rwxr-xr-x	root/root	usr/lib/libavcodec.so.60.3.100
-lrwxrwxrwx	root/root	usr/lib/libavdevice.so -> libavdevice.so.60.1.100
-lrwxrwxrwx	root/root	usr/lib/libavdevice.so.60 -> libavdevice.so.60.1.100
--rwxr-xr-x	root/root	usr/lib/libavdevice.so.60.1.100
-lrwxrwxrwx	root/root	usr/lib/libavfilter.so -> libavfilter.so.9.3.100
-lrwxrwxrwx	root/root	usr/lib/libavfilter.so.9 -> libavfilter.so.9.3.100
--rwxr-xr-x	root/root	usr/lib/libavfilter.so.9.3.100
-lrwxrwxrwx	root/root	usr/lib/libavformat.so -> libavformat.so.60.3.100
-lrwxrwxrwx	root/root	usr/lib/libavformat.so.60 -> libavformat.so.60.3.100
--rwxr-xr-x	root/root	usr/lib/libavformat.so.60.3.100
-lrwxrwxrwx	root/root	usr/lib/libavutil.so -> libavutil.so.58.2.100
-lrwxrwxrwx	root/root	usr/lib/libavutil.so.58 -> libavutil.so.58.2.100
--rwxr-xr-x	root/root	usr/lib/libavutil.so.58.2.100
-lrwxrwxrwx	root/root	usr/lib/libpostproc.so -> libpostproc.so.57.1.100
-lrwxrwxrwx	root/root	usr/lib/libpostproc.so.57 -> libpostproc.so.57.1.100
--rwxr-xr-x	root/root	usr/lib/libpostproc.so.57.1.100
-lrwxrwxrwx	root/root	usr/lib/libswresample.so -> libswresample.so.4.10.100
-lrwxrwxrwx	root/root	usr/lib/libswresample.so.4 -> libswresample.so.4.10.100
--rwxr-xr-x	root/root	usr/lib/libswresample.so.4.10.100
-lrwxrwxrwx	root/root	usr/lib/libswscale.so -> libswscale.so.7.1.100
-lrwxrwxrwx	root/root	usr/lib/libswscale.so.7 -> libswscale.so.7.1.100
--rwxr-xr-x	root/root	usr/lib/libswscale.so.7.1.100
+lrwxrwxrwx	root/root	usr/lib/libavcodec.so -> libavcodec.so.60.31.102
+lrwxrwxrwx	root/root	usr/lib/libavcodec.so.60 -> libavcodec.so.60.31.102
+-rwxr-xr-x	root/root	usr/lib/libavcodec.so.60.31.102
+lrwxrwxrwx	root/root	usr/lib/libavdevice.so -> libavdevice.so.60.3.100
+lrwxrwxrwx	root/root	usr/lib/libavdevice.so.60 -> libavdevice.so.60.3.100
+-rwxr-xr-x	root/root	usr/lib/libavdevice.so.60.3.100
+lrwxrwxrwx	root/root	usr/lib/libavfilter.so -> libavfilter.so.9.12.100
+lrwxrwxrwx	root/root	usr/lib/libavfilter.so.9 -> libavfilter.so.9.12.100
+-rwxr-xr-x	root/root	usr/lib/libavfilter.so.9.12.100
+lrwxrwxrwx	root/root	usr/lib/libavformat.so -> libavformat.so.60.16.100
+lrwxrwxrwx	root/root	usr/lib/libavformat.so.60 -> libavformat.so.60.16.100
+-rwxr-xr-x	root/root	usr/lib/libavformat.so.60.16.100
+lrwxrwxrwx	root/root	usr/lib/libavutil.so -> libavutil.so.58.29.100
+lrwxrwxrwx	root/root	usr/lib/libavutil.so.58 -> libavutil.so.58.29.100
+-rwxr-xr-x	root/root	usr/lib/libavutil.so.58.29.100
+lrwxrwxrwx	root/root	usr/lib/libpostproc.so -> libpostproc.so.57.3.100
+lrwxrwxrwx	root/root	usr/lib/libpostproc.so.57 -> libpostproc.so.57.3.100
+-rwxr-xr-x	root/root	usr/lib/libpostproc.so.57.3.100
+lrwxrwxrwx	root/root	usr/lib/libswresample.so -> libswresample.so.4.12.100
+lrwxrwxrwx	root/root	usr/lib/libswresample.so.4 -> libswresample.so.4.12.100
+-rwxr-xr-x	root/root	usr/lib/libswresample.so.4.12.100
+lrwxrwxrwx	root/root	usr/lib/libswscale.so -> libswscale.so.7.5.100
+lrwxrwxrwx	root/root	usr/lib/libswscale.so.7 -> libswscale.so.7.5.100
+-rwxr-xr-x	root/root	usr/lib/libswscale.so.7.5.100
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libavcodec.pc
 -rw-r--r--	root/root	usr/lib/pkgconfig/libavdevice.pc
@@ -188,6 +189,7 @@ drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/doc/
 drwxr-xr-x	root/root	usr/share/doc/ffmpeg/
 -rw-r--r--	root/root	usr/share/doc/ffmpeg/bootstrap.min.css
+-rw-r--r--	root/root	usr/share/doc/ffmpeg/community.html
 -rw-r--r--	root/root	usr/share/doc/ffmpeg/default.css
 -rw-r--r--	root/root	usr/share/doc/ffmpeg/developer.html
 -rw-r--r--	root/root	usr/share/doc/ffmpeg/faq.html
@@ -203,8 +205,6 @@ drwxr-xr-x	root/root	usr/share/doc/ffmpeg/
 -rw-r--r--	root/root	usr/share/doc/ffmpeg/ffmpeg-scaler.html
 -rw-r--r--	root/root	usr/share/doc/ffmpeg/ffmpeg-utils.html
 -rw-r--r--	root/root	usr/share/doc/ffmpeg/ffmpeg.html
--rw-r--r--	root/root	usr/share/doc/ffmpeg/ffplay-all.html
--rw-r--r--	root/root	usr/share/doc/ffmpeg/ffplay.html
 -rw-r--r--	root/root	usr/share/doc/ffmpeg/ffprobe-all.html
 -rw-r--r--	root/root	usr/share/doc/ffmpeg/ffprobe.html
 -rw-r--r--	root/root	usr/share/doc/ffmpeg/general.html
@@ -267,8 +267,6 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 -rw-r--r--	root/root	usr/share/man/man1/ffmpeg-scaler.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/ffmpeg-utils.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/ffmpeg.1.gz
--rw-r--r--	root/root	usr/share/man/man1/ffplay-all.1.gz
--rw-r--r--	root/root	usr/share/man/man1/ffplay.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/ffprobe-all.1.gz
 -rw-r--r--	root/root	usr/share/man/man1/ffprobe.1.gz
 drwxr-xr-x	root/root	usr/share/man/man3/

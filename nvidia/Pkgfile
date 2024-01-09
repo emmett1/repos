@@ -1,7 +1,7 @@
 # Depends on: gtk2 gtk3 libglvnd 
 
 name=nvidia
-version=535.129.03
+version=535.146.02
 release=1
 source=(https://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run \
 	90-nvidia-uvm.rules 10-nvidia-drm-outputclass.conf)
@@ -165,14 +165,17 @@ pkg_build() {
 	install -D -m 0644 $SRC/90-nvidia-uvm.rules $PKG/lib/udev/rules.d/90-nvidia-uvm.rules
 
 	# kernel modules
-	cd kernel
-	for k in $(ls -1 /lib/modules); do
-		[ -d /lib/modules/$k/build ] || continue
-		export PATH=/bin:/usr/bin:/sbin:/usr/sbin
-		CC=gcc IGNORE_CC_MISMATCH=1 SYSSRC=/lib/modules/$k/source make module
-		install -d $PKG/lib/modules/$k/extra
-		install -m 0644 *.ko $PKG/lib/modules/$k/extra/
-	done
+	install -dm0755 $PKG/usr/src
+	cp -r kernel $PKG/usr/src/$name
+
+	#cd kernel
+	#for k in $(ls -1 /lib/modules); do
+	#	[ -d /lib/modules/$k/build ] || continue
+	#	export PATH=/bin:/usr/bin:/sbin:/usr/sbin
+	#	CC=gcc IGNORE_CC_MISMATCH=1 SYSSRC=/lib/modules/$k/source make module
+	#	install -d $PKG/lib/modules/$k/extra
+	#	install -m 0644 *.ko $PKG/lib/modules/$k/extra/
+	#done
 
 	# blacklist nouveau
 	mkdir -p $PKG/etc/modprobe.d

@@ -54,7 +54,6 @@ drwxrwxr-x	root/root	usr/share/vulkan/registry/
 -rw-rw-r--	root/root	usr/share/vulkan/registry/apiconventions.py
 -rw-rw-r--	root/root	usr/share/vulkan/registry/cgenerator.py
 -rw-rw-r--	root/root	usr/share/vulkan/registry/generator.py
--rwxrwxr-x	root/root	usr/share/vulkan/registry/genvk.py
 -rwxrwxr-x	root/root	usr/share/vulkan/registry/parse_dependency.py
 drwxrwxr-x	root/root	usr/share/vulkan/registry/profiles/
 -rw-rw-r--	root/root	usr/share/vulkan/registry/profiles/VP_KHR_roadmap_2022.json

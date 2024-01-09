@@ -4,8 +4,7 @@ name=dbus
 version=1.14.10
 release=1
 source=(https://$name.freedesktop.org/releases/$name/$name-$version.tar.xz
-	dbus.run)
-sv=(dbus.run)
+	dbus)
 build_opt="
         --disable-doxygen-docs
         --disable-xml-docs
@@ -15,3 +14,7 @@ build_opt="
         --with-system-socket=/run/dbus/system_bus_socket
         --with-console-auth-dir=/run/console
 "
+
+post_build() {
+	install -Dm755 $SRC/$name $PKG/etc/rc.d/$name
+}

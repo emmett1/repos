@@ -56,9 +56,9 @@ drwxr-xr-x	root/root	usr/lib/
 drwxr-xr-x	root/root	usr/lib/cmake/
 drwxr-xr-x	root/root	usr/lib/cmake/libxml2/
 -rw-r--r--	root/root	usr/lib/cmake/libxml2/libxml2-config.cmake
-lrwxrwxrwx	root/root	usr/lib/libxml2.so -> libxml2.so.2.10.4
-lrwxrwxrwx	root/root	usr/lib/libxml2.so.2 -> libxml2.so.2.10.4
--rwxr-xr-x	root/root	usr/lib/libxml2.so.2.10.4
+lrwxrwxrwx	root/root	usr/lib/libxml2.so -> libxml2.so.2.12.3
+lrwxrwxrwx	root/root	usr/lib/libxml2.so.2 -> libxml2.so.2.12.3
+-rwxr-xr-x	root/root	usr/lib/libxml2.so.2.12.3
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libxml-2.0.pc
 drwxr-xr-x	root/root	usr/lib/python3.11/
@@ -95,7 +95,6 @@ drwxr-xr-x	root/root	usr/share/doc/libxml2/examples/
 -rw-r--r--	root/root	usr/share/doc/libxml2/examples/xpath1.c
 -rw-r--r--	root/root	usr/share/doc/libxml2/examples/xpath2.c
 drwxr-xr-x	root/root	usr/share/doc/libxml2/python/
--rw-r--r--	root/root	usr/share/doc/libxml2/python/TODO
 drwxr-xr-x	root/root	usr/share/doc/libxml2/python/examples/
 -rw-r--r--	root/root	usr/share/doc/libxml2/python/examples/attribs.py
 -rw-r--r--	root/root	usr/share/doc/libxml2/python/examples/build.py
@@ -128,6 +127,7 @@ drwxr-xr-x	root/root	usr/share/doc/libxml2/python/examples/
 -rw-r--r--	root/root	usr/share/doc/libxml2/python/examples/resolver.py
 -rw-r--r--	root/root	usr/share/doc/libxml2/python/examples/schema.py
 -rw-r--r--	root/root	usr/share/doc/libxml2/python/examples/serialize.py
+-rw-r--r--	root/root	usr/share/doc/libxml2/python/examples/setup_test.py
 -rw-r--r--	root/root	usr/share/doc/libxml2/python/examples/sync.py
 -rw-r--r--	root/root	usr/share/doc/libxml2/python/examples/test.dtd
 -rw-r--r--	root/root	usr/share/doc/libxml2/python/examples/thread2.py

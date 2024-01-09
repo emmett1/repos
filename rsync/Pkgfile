@@ -3,5 +3,10 @@
 name=rsync
 version=3.2.7
 release=1
-source=(https://www.samba.org/ftp/$name/src/$name-$version.tar.gz)
+source=(https://www.samba.org/ftp/$name/src/$name-$version.tar.gz
+	${name}d)
 build_opt="--disable-xxhash --without-included-zlib --disable-lz4"
+
+post_build() {
+	install -Dm755 $SRC/${name}d $PKG/etc/rc.d/${name}d
+}

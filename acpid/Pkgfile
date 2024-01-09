@@ -1,0 +1,11 @@
+# Depends on: 
+
+name=acpid
+version=2.0.34
+release=1
+source=(https://downloads.sourceforge.net/${name}2/${name}-${version}.tar.xz
+	acpid)
+
+post_build() {
+	install -Dm755 $SRC/$name $PKG/etc/rc.d/$name
+}

@@ -9,6 +9,7 @@ drwxr-xr-x	root/root	usr/lib/cmake/DHT/
 -rw-r--r--	root/root	usr/lib/cmake/DHT/DHTConfigVersion.cmake
 -rw-r--r--	root/root	usr/lib/cmake/DHT/DHTTargets-release.cmake
 -rw-r--r--	root/root	usr/lib/cmake/DHT/DHTTargets.cmake
+-rw-r--r--	root/root	usr/lib/libdht.a
 drwxr-xr-x	root/root	usr/share/
 drwxr-xr-x	root/root	usr/share/doc/
 drwxr-xr-x	root/root	usr/share/doc/DHT/

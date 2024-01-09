@@ -1,5 +1,9 @@
 name=fakeroot
-version=1.32.1
+version=1.32.2
 release=1
-source=(http://ftp.debian.org/debian/pool/main/f/fakeroot/${name}_${version}.orig.tar.gz)
+source=(https://ftp.debian.org/debian/pool/main/f/fakeroot/${name}_${version}.orig.tar.gz)
 build_opt="--with-ipc=sysv"
+
+pre_build() {
+	./bootstrap
+}

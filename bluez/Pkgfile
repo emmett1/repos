@@ -1,0 +1,12 @@
+# Depends on: glib dbus libical
+
+name=bluez
+version=5.71
+release=1
+source=(https://www.kernel.org/pub/linux/bluetooth/${name}-${version}.tar.xz
+	bluetoothd)
+build_opt="--enable-library --disable-manpages --disable-systemd"
+
+post_build() {
+	install -Dm755 $SRC/bluetoothd $PKG/etc/rc.d/bluetoothd
+}

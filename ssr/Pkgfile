@@ -1,4 +1,4 @@
-# Depends on: 
+# Depends on: libx11 libglvnd qt5 ffmpeg v4l-utils pulseaudio libxinerama glu
 
 name=ssr
 version=0.4.4

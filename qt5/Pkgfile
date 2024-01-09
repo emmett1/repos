@@ -1,4 +1,4 @@
-# Depends on: alsa-lib dbus double-conversion glib harfbuzz icu libjpeg-turbo libpng tiff libwebp libxkbcommon mesa mtdev pcre2 wayland xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm libxkbcommon 
+# Depends on: alsa-lib dbus double-conversion glib harfbuzz icu libjpeg-turbo libpng tiff libwebp libxkbcommon mesa mtdev pcre2 wayland xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm libxkbcommon  clang
 
 name=qt5
 version=5.15.11

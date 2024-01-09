@@ -1,3 +1,5 @@
+# Depends on: docbook-xml
+
 name=docbook-xsl
 version=1.79.2
 release=1
@@ -17,6 +19,4 @@ pkg_build() {
 	ln -s VERSION $PKG/usr/share/xml/docbook/xsl-stylesheets-${version}/VERSION.xsl
 
 	ln -sf xsl-stylesheets-$version $PKG/usr/share/xml/docbook/xsl-stylesheets
-
-	find $PKG \( -name "NEWS*" -o -name "README*" -o -name "ChangeLog*" \) -delete
 }

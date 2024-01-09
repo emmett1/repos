@@ -1,13 +1,15 @@
 # Depends on: libxaw
 
 name=xterm
-version=386
+version=388
 release=1
-source=(https://invisible-mirror.net/archives/$name/$name-$version.tgz)
+source=(https://invisible-mirror.net/archives/$name/$name-$version.tgz
+	posix-ptys.patch)
 export TERMINFO=/usr/share/terminfo
 build_opt="--with-app-defaults=/usr/share/X11/app-defaults --enable-freetype --enable-wide-chars --with-x"
 
 pre_build() {
+	#export CFLAGS="$CFLAGS -flto=auto -D_BSD_SOURCE"
 	sed -i '/v0/{n;s/new:/new:kb=^?:/}' termcap
 	printf '\tkbs=\\177,\n' >> terminfo
 }

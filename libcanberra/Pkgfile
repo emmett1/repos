@@ -1,4 +1,4 @@
-# Depends on: libvorbis gtk3
+# Depends on: libvorbis gtk3 libtool
 
 name=libcanberra
 version=0.30

@@ -6,7 +6,8 @@ release=1
 source=(http://downloads.sourceforge.net/freeimage/FreeImage3180.zip
 	freeimage-libraw-0.20.patch
 	freeimage-libraw-0.21.patch
-	freeimage-unbundle.patch)
+	freeimage-unbundle.patch
+	fix-build.patch)
 
 pkg_build() {
 	rm -r Source/Lib* Source/ZLib Source/OpenEXR

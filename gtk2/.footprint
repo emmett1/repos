@@ -295,7 +295,6 @@ drwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/immodules/
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/immodules/im-viqr.so
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/immodules/im-xim.so
 drwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/printbackends/
--rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/printbackends/libprintbackend-cups.so
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/printbackends/libprintbackend-file.so
 -rwxr-xr-x	root/root	usr/lib/gtk-2.0/2.10.0/printbackends/libprintbackend-lpr.so
 drwxr-xr-x	root/root	usr/lib/gtk-2.0/include/

@@ -4,7 +4,6 @@ drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/nvlc
 -rwxr-xr-x	root/root	usr/bin/qvlc
 -rwxr-xr-x	root/root	usr/bin/rvlc
--rwxr-xr-x	root/root	usr/bin/svlc
 -rwxr-xr-x	root/root	usr/bin/vlc
 -rwxr-xr-x	root/root	usr/bin/vlc-wrapper
 drwxr-xr-x	root/root	usr/include/
@@ -144,7 +143,6 @@ drwxr-xr-x	root/root	usr/lib/vlc/plugins/access/
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/access/libsatip_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/access/libsdp_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/access/libshm_plugin.so
--rwxr-xr-x	root/root	usr/lib/vlc/plugins/access/libsmb_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/access/libtcp_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/access/libtimecode_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/access/libudp_plugin.so
@@ -156,7 +154,6 @@ drwxr-xr-x	root/root	usr/lib/vlc/plugins/access_output/
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/access_output/libaccess_output_dummy_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/access_output/libaccess_output_file_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/access_output/libaccess_output_http_plugin.so
--rwxr-xr-x	root/root	usr/lib/vlc/plugins/access_output/libaccess_output_livehttp_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/access_output/libaccess_output_rist_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/access_output/libaccess_output_udp_plugin.so
 drwxr-xr-x	root/root	usr/lib/vlc/plugins/audio_filter/
@@ -222,7 +219,6 @@ drwxr-xr-x	root/root	usr/lib/vlc/plugins/codec/
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/codec/libsubstx3g_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/codec/libsubsusf_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/codec/libsvcdsub_plugin.so
--rwxr-xr-x	root/root	usr/lib/vlc/plugins/codec/libsvgdec_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/codec/libt140_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/codec/libtelx_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/codec/libtextst_plugin.so
@@ -289,12 +285,10 @@ drwxr-xr-x	root/root	usr/lib/vlc/plugins/demux/
 drwxr-xr-x	root/root	usr/lib/vlc/plugins/gui/
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/gui/libncurses_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/gui/libqt_plugin.so
--rwxr-xr-x	root/root	usr/lib/vlc/plugins/gui/libskins2_plugin.so
 drwxr-xr-x	root/root	usr/lib/vlc/plugins/keystore/
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/keystore/libfile_keystore_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/keystore/libkwallet_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/keystore/libmemory_keystore_plugin.so
--rwxr-xr-x	root/root	usr/lib/vlc/plugins/keystore/libsecret_plugin.so
 drwxr-xr-x	root/root	usr/lib/vlc/plugins/logger/
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/logger/libconsole_logger_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/logger/libfile_logger_plugin.so
@@ -308,7 +302,6 @@ drwxr-xr-x	root/root	usr/lib/vlc/plugins/misc/
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/misc/libdbus_screensaver_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/misc/libexport_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/misc/libfingerprinter_plugin.so
--rwxr-xr-x	root/root	usr/lib/vlc/plugins/misc/libgnutls_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/misc/liblogger_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/misc/libstats_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/misc/libvod_rtsp_plugin.so
@@ -323,8 +316,6 @@ drwxr-xr-x	root/root	usr/lib/vlc/plugins/mux/
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/mux/libmux_ogg_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/mux/libmux_ps_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/mux/libmux_wav_plugin.so
-drwxr-xr-x	root/root	usr/lib/vlc/plugins/notify/
--rwxr-xr-x	root/root	usr/lib/vlc/plugins/notify/libnotify_plugin.so
 drwxr-xr-x	root/root	usr/lib/vlc/plugins/packetizer/
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/packetizer/libpacketizer_a52_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/packetizer/libpacketizer_av1_plugin.so
@@ -354,7 +345,6 @@ drwxr-xr-x	root/root	usr/lib/vlc/plugins/spu/
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/spu/liblogo_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/spu/libmarq_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/spu/libmosaic_plugin.so
--rwxr-xr-x	root/root	usr/lib/vlc/plugins/spu/libremoteosd_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/spu/librss_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/spu/libsubsdelay_plugin.so
 drwxr-xr-x	root/root	usr/lib/vlc/plugins/stream_extractor/
@@ -390,7 +380,6 @@ drwxr-xr-x	root/root	usr/lib/vlc/plugins/stream_out/
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/stream_out/libstream_out_transcode_plugin.so
 drwxr-xr-x	root/root	usr/lib/vlc/plugins/text_renderer/
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/text_renderer/libfreetype_plugin.so
--rwxr-xr-x	root/root	usr/lib/vlc/plugins/text_renderer/libsvg_plugin.so
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/text_renderer/libtdummy_plugin.so
 drwxr-xr-x	root/root	usr/lib/vlc/plugins/video_chroma/
 -rwxr-xr-x	root/root	usr/lib/vlc/plugins/video_chroma/libchain_plugin.so
@@ -531,14 +520,6 @@ drwxr-xr-x	root/root	usr/share/man/man1/
 drwxr-xr-x	root/root	usr/share/metainfo/
 -rw-r--r--	root/root	usr/share/metainfo/vlc.appdata.xml
 drwxr-xr-x	root/root	usr/share/vlc/
-drwxr-xr-x	root/root	usr/share/vlc/skins2/
--rw-r--r--	root/root	usr/share/vlc/skins2/default.vlt
-drwxr-xr-x	root/root	usr/share/vlc/skins2/fonts/
--rw-r--r--	root/root	usr/share/vlc/skins2/fonts/FreeSans.ttf
--rw-r--r--	root/root	usr/share/vlc/skins2/fonts/FreeSansBold.ttf
--rw-r--r--	root/root	usr/share/vlc/skins2/skin.catalog
--rw-r--r--	root/root	usr/share/vlc/skins2/skin.dtd
--rw-r--r--	root/root	usr/share/vlc/skins2/winamp2.xml
 drwxr-xr-x	root/root	usr/share/vlc/utils/
 -rwxr-xr-x	root/root	usr/share/vlc/utils/audio-vlc-default.sh
 -rwxr-xr-x	root/root	usr/share/vlc/utils/gnome-vlc-default.sh

@@ -1,4 +1,4 @@
-# Depends on: qt5 sdl2 acpica-unix libidl glslang libvpx libxt lvm2 libxinerama libxcursor
+# Depends on: qt5 sdl2 acpica-unix libidl glslang libvpx libxt lvm2 libxinerama libxcursor libxmu
 
 name=virtualbox
 _name=VirtualBox
@@ -84,16 +84,16 @@ pkg_build() {
 	install -Dm0644 "$SRC/virtualbox.60-vboxdrv.rules" "$PKG/lib/udev/rules.d/60-vboxdrv.rules"
 
 	# kernel modules
-	install -dm0755 "$PKG/usr/src"
-	cp -r src "$PKG/usr/src/vboxhost-${version}_OSE"
+	install -dm0755 $PKG/usr/src
+	cp -r src $PKG/usr/src/$name
 
 	# make the modules
-	if [ -d /lib/modules/$(uname -r)/build/ ]; then
-		for i in vboxdrv vboxnetadp vboxnetflt; do
-			make -C src/$i
-			make -C src/$i INSTALL_MOD_PATH=$PKG install
-		done
-	fi
+	#if [ -d /lib/modules/$(uname -r)/build/ ]; then
+	#	for i in vboxdrv vboxnetadp vboxnetflt; do
+	#		make -C src/$i
+	#		make -C src/$i INSTALL_MOD_PATH=$PKG install
+	#	done
+	#fi
 	
 	mkdir -p $PKG/etc/modules-load.d
 	echo vboxdrv >> $PKG/etc/modules-load.d/virtualbox.conf

@@ -1,0 +1,74 @@
+# Depends on: clang autoconf2.13 rust alsa-utils nspr rust cbindgen icu nodejs gtk3 unzip libwebp libxcomposite libxdamage libxcursor libice libsm libvpx nasm nss libevent
+
+name=firefox
+version=121.0
+release=1
+source=(https://ftp.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz)
+
+pkg_build() {
+	pkg-config --exist && _opt=",pulseaudio"
+
+	export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=none
+	export MOZBUILD_STATE_PATH=${PWD}/mozbuild
+
+cat > .mozconfig << EOF
+ac_add_options --disable-necko-wifi
+ac_add_options --enable-audio-backends=alsa$_opt
+ac_add_options --with-system-icu
+ac_add_options --with-system-libevent
+ac_add_options --with-system-libvpx
+ac_add_options --with-system-nspr
+ac_add_options --with-system-nss
+ac_add_options --with-system-webp
+ac_add_options --enable-official-branding
+ac_add_options --disable-debug-symbols
+ac_add_options --disable-elf-hack
+ac_add_options --prefix=/usr
+ac_add_options --enable-application=browser
+ac_add_options --disable-crashreporter
+ac_add_options --disable-updater
+ac_add_options --disable-tests
+ac_add_options --enable-optimize
+ac_add_options --enable-system-ffi
+ac_add_options --enable-system-pixman
+ac_add_options --with-system-jpeg
+ac_add_options --with-system-png
+ac_add_options --with-system-zlib
+ac_add_options --without-wasm-sandboxed-libraries
+EOF
+
+	if [ -e '/usr/bin/ccache' ]; then
+		echo 'ac_add_options --enable-ccache' >> .mozconfig
+		PATH=$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')
+	fi
+
+	./mach configure
+	./mach build
+	./mach install
+
+	mkdir -pv $PKG/usr/share/applications
+	mkdir -pv $PKG/usr/share/pixmaps
+
+	cat > $PKG/usr/share/applications/firefox.desktop << EOF
+[Desktop Entry]
+Encoding=UTF-8
+Name=Firefox Web Browser
+Comment=Browse the World Wide Web
+GenericName=Web Browser
+Exec=firefox %u
+Terminal=false
+Type=Application
+Icon=firefox
+Categories=GNOME;GTK;Network;WebBrowser;
+MimeType=text/xml;text/mml;text/html;application/xhtml+xml;application/vnd.mozilla.xul+xml;x-scheme-handler/http;x-scheme-handler/https
+StartupNotify=true
+EOF
+
+	mkdir -p $PKG/usr/share/pixmaps
+	ln -sfv /usr/lib/firefox/browser/chrome/icons/default/default128.png \
+	        $PKG/usr/share/pixmaps/firefox.png
+
+	# revdep
+	mkdir -p $PKG/etc/revdep.d
+	echo "/usr/lib/firefox" > $PKG/etc/revdep.d/$name
+}

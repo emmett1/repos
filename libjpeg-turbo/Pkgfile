@@ -1,3 +1,5 @@
+# Depends on: yasm
+
 name=libjpeg-turbo
 version=2.1.5.1
 release=1

@@ -227,8 +227,6 @@ drwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/dpx.so
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/ept.la
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/ept.so
--rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/exr.la
--rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/exr.so
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/farbfeld.la
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/farbfeld.so
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/fax.la
@@ -265,8 +263,6 @@ drwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/ipl.so
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/jnx.la
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/jnx.so
--rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/jp2.la
--rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/jp2.so
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/jpeg.la
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/jpeg.so
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/json.la
@@ -413,8 +409,6 @@ drwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/vips.so
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/wbmp.la
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/wbmp.so
--rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/webp.la
--rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/webp.so
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/wpg.la
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/wpg.so
 -rwxr-xr-x	root/root	usr/lib/ImageMagick-7.1.1/modules-Q16HDRI/coders/x.la

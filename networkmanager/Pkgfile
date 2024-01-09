@@ -1,11 +1,10 @@
 # Depends on: jansson libndp gobject-introspection newt nss polkit vala wpa_supplicant libpsl 
 
 name=networkmanager
-version=1.42.8
+version=1.44.2
 release=1
 source=(https://download.gnome.org/sources/NetworkManager/${version%.*}/NetworkManager-$version.tar.xz
-	$name.run)
-sv=($name.run)
+	$name)
 build_opt="
 	-Dlibaudit=no
 	-Dnmtui=true
@@ -39,4 +38,6 @@ echo "polkit.addRule(function(action, subject) {
         return polkit.Result.YES;
     }
 });" > $PKG/etc/polkit-1/rules.d/50-org.freedesktop.NetworkManager.rules
+
+install -Dm755 $SRC/$name $PKG/etc/rc.d/$name
 }

@@ -30,6 +30,10 @@ drwxr-xr-x	root/root	usr/share/man/pt/
 drwxr-xr-x	root/root	usr/share/man/pt/man1/
 -rw-r--r--	root/root	usr/share/man/pt/man1/faked.1
 -rw-r--r--	root/root	usr/share/man/pt/man1/fakeroot.1
+drwxr-xr-x	root/root	usr/share/man/ro/
+drwxr-xr-x	root/root	usr/share/man/ro/man1/
+-rw-r--r--	root/root	usr/share/man/ro/man1/faked.1
+-rw-r--r--	root/root	usr/share/man/ro/man1/fakeroot.1
 drwxr-xr-x	root/root	usr/share/man/sv/
 drwxr-xr-x	root/root	usr/share/man/sv/man1/
 -rw-r--r--	root/root	usr/share/man/sv/man1/faked.1

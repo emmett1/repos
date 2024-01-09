@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# /etc/rc.d/slim: start/stop slim daemon
+#
+
+. /etc/rc.subr
+
+NAME="Slim"
+
+case $1 in
+	start)
+		msg "Starting $NAME..."
+		start_daemon /usr/bin/slim -d
+		;;
+	stop)
+		msg "Stopping $NAME..."
+		stop_daemon /usr/bin/slim
+		;;
+	restart)
+		$0 stop
+		sleep 1
+		$0 start
+		;;
+	status)
+		status_daemon /usr/bin/slim
+		;;
+	*)
+		echo "usage: $0 [start|stop|restart|status]"
+		;;
+esac
+
+# End of file
