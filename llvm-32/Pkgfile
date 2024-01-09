@@ -1,11 +1,10 @@
 # Depends on: llvm zstd-32 zlib-32 icu-32 libffi-32 libxml2-32
 
 name=llvm-32
-version=17.0.4
+version=17.0.6
 release=1
 source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz
-	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz
-	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/third-party-$version.src.tar.xz)
+	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz)
 build_opt="
 	-DLLVM_LIBDIR_SUFFIX=32
 	-DCMAKE_C_FLAGS:STRING=-m32
@@ -27,11 +26,8 @@ build_type=cmake_build
 
 pre_build() {
 	mv ../cmake-${version}.src .
-	mv ../third-party-${version}.src .
 
-	sed "/LLVM_COMMON_CMAKE_UTILS/s@../cmake@cmake-${version}.src@" -i CMakeLists.txt                 
-	sed "/LLVM_THIRD_PARTY_DIR/s@../third-party@third-party-${version}.src@" \
-		-i cmake/modules/HandleLLVMOptions.cmake
+	sed "/LLVM_COMMON_CMAKE_UTILS/s@../cmake@cmake-${version}.src@" -i CMakeLists.txt
 }
 
 post_build() {

@@ -1,5 +1,5 @@
 name=nvidia-32
-version=535.129.03
+version=535.146.02
 release=1
 source=(http://us.download.nvidia.com/XFree86/Linux-x86_64/$version/NVIDIA-Linux-x86_64-$version.run)
 
