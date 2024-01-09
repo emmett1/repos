@@ -1,3 +1,5 @@
+# Depends on: pcre2
+
 name=grep
 version=3.11
 release=1

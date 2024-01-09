@@ -1,3 +1,5 @@
+# Pkgfile for linux-pam
+
 name=linux-pam
 version=1.5.3
 release=1

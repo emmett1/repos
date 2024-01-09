@@ -1,3 +1,5 @@
+# Depends on: kmod openssl xz zlib
+
 name=eudev
 version=3.2.14
 release=1

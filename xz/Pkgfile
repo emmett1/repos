@@ -1,5 +1,5 @@
 name=xz
-version=5.4.4
+version=5.4.5
 release=1
 source=(https://tukaani.org/$name/$name-$version.tar.$name)
 keep_static=1

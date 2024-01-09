@@ -1,0 +1,7 @@
+# Depends on: 
+
+name=sysvinit
+version=3.08
+release=1
+source=(https://github.com/slicer69/${name}/releases/download/${version}/${name}-${version}.tar.xz
+	sysvinit-3.08-consolidated-1.patch)

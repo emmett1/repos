@@ -1,3 +1,5 @@
+# Depends on: perl-xml-parser
+
 name=intltool
 version=0.51.0
 release=1

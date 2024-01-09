@@ -1,5 +1,5 @@
 name=bc
-version=6.7.0
+version=6.7.4
 release=1
 source=(https://github.com/gavinhoward/$name/releases/download/$version/$name-$version.tar.xz)
 

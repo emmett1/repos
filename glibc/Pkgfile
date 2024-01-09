@@ -1,3 +1,5 @@
+# Depends on: python
+
 name=glibc
 version=2.38
 release=1
@@ -8,6 +10,7 @@ source=(https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz
 	glibc-2.38-upstream_fixes-3.patch)
 #	reenable_DT_HASH.patch)
 keep_static=1
+keep_locale=1
 
 bootstrap_build() {
 	mkdir -v build32
@@ -114,4 +117,6 @@ pkg_build() {
 	ln -sv ../usr/lib32/ld-linux.so.2 $PKG/lib/ld-linux.so.2
 	ln -sv ../lib/locale $PKG/usr/lib32/locale
 		echo "/usr/lib32" > $PKG/etc/ld.so.conf.d/lib32.conf
+
+	rm -rf $PKG/usr/share/locale
 }

@@ -1,5 +1,7 @@
+# Depends on: openssl zlib zstd
+
 name=curl
-version=8.4.0
+version=8.5.0
 release=1
 source=(https://$name.se/download/$name-$version.tar.xz)
 build_opt="

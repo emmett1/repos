@@ -3,6 +3,7 @@ version=1.47.0
 release=1
 source=(https://downloads.sourceforge.net/project/$name/$name/v$version/$name-$version.tar.gz)
 build_opt="
+	--with-root-prefix=
 	--enable-elf-shlibs
 	--disable-libblkid
 	--disable-libuuid

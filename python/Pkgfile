@@ -1,3 +1,5 @@
+# Depends on: bzip2 expat gdbm libffi libxcrypt ncurses openssl readline sqlite util-linux xz zlib
+
 name=python
 version=3.11.6
 release=1
@@ -18,7 +20,7 @@ pre_build() {
 
 post_build() {
 	mv $PKG/usr/include/python${version%.*}/pyconfig.h \
-	   $PKG/usr/include/python${version%.*}/pyconfig-64.h
+		$PKG/usr/include/python${version%.*}/pyconfig-64.h
 	install -m 0644 $SRC/pyconfig.h $PKG/usr/include/python${version%.*}/
 	ln -s python3 $PKG/usr/bin/python
 }

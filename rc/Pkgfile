@@ -1,0 +1,7 @@
+# Depends on: 
+
+name=rc
+version=20210521
+_commit=65ef608163d72c16a721eeecf1f9865ed76f7920
+release=1
+source=(https://github.com/venomlinux/${name}/archive/${_commit}.tar.gz)

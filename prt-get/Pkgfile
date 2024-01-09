@@ -4,6 +4,10 @@ release=1
 source=(http://crux.nu/files/prt-get-$version.tar.xz
 	prt-get.conf prt-get.aliases)
 
+pre_build() {
+	sed 's/#include <string>/#include <string>\n#include <ctime>/' -i src/package.h
+}
+
 post_build() {
 	install -m 644 $SRC/prt-get.{conf,aliases} $PKG/etc/
 	install -d $PKG/var/lib/pkg

@@ -1,5 +1,7 @@
+# Depends on: curl expat openssl zlib zstd
+
 name=git
-version=2.42.0
+version=2.43.0
 release=1
 source=(https://www.kernel.org/pub/software/scm/$name/$name-$version.tar.xz git)
 

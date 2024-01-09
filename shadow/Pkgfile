@@ -1,3 +1,5 @@
+# Depends on: acl attr libxcrypt
+
 name=shadow
 version=4.14.2
 release=1
